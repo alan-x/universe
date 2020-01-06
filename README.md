@@ -20,6 +20,10 @@ In other words, this is a project pool. Winner winner, chicken dinner!
     - 🎉 new
     - 🎉 bignumber(add, sub)
     - 🎉 clone
+    
+- others
+    - 🎉 flexible
+    
 - react
     - 🚧 hooks
     - 🚧 ssr 
