@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拖拽</title>
+    <style>
+        #main {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+<div id="main">
+
+</div>
+
+<!--页面内有一个正方形元素，实现对其拖拽和放下-->
+<script>
+
+    // 实现1
+    // bug1. 抖动
+    let main = document.getElementById('main')
+
+    let drag = false
+    let startX, startY
+    main.addEventListener('mousedown', (e) => {
+        drag = true
+        startX = e.clientX
+        startY = e.clientY
+    })
+
+    main.addEventListener('mousemove', (e) => {
+        if (drag) {
+            console.log('mousemove', e.clientX, e.clientY)
+
+            let moveX = e.clientX - startX
+            let moveY = e.clientY - startY
+            startX = e.clientX
+            startY = e.clientY
+
+            main.style.left = (main.offsetLeft + moveX) + 'px'
+            main.style.top = (main.offsetTop + moveY) + 'px'
+        }
+    })
+
+
+    main.addEventListener('mouseup', (e) => {
+        drag = false
+        console.log('mouseup', e.clientX, e.clientY)
+
+    })
+    main.addEventListener('onmouseout', () => {
+        drag = false
+    })
+
+</script>
+</body>
+</html>
