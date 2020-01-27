@@ -1,0 +1,23 @@
+{
+  "name": "vdom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/followWinter/vdom.git",
+  "author": "lyxxxx <lyxxxx@yeah.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-react-jsx": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "jest": "^23.6.0",
+    "regenerator-runtime": "^0.13.1",
+    "rollup": "^1.0.2",
+    "rollup-plugin-babel": "^4.2.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
