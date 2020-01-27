@@ -1,0 +1,10 @@
+body {
+    background-color: #eeeeee;
+    font-family: "Microsoft Sans Serif";
+}
+
+.text {
+    color: black;
+    font-size: 100px;
+    text-align: center;
+}
