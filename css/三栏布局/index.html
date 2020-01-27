@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三栏布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<article>
+    <section>
+        <!-- 缺点：太新了 -->
+        <!-- 优点：和 flex 一样-->
+        <style>
+            .grid {
+                display: grid;
+                grid-template-columns: 300px auto 300px;
+            }
+
+            .grid div {
+                height: 100px;
+            }
+
+            .grid .left {
+                height: 100px;
+                background-color: red;
+            }
+
+            .grid .right {
+                height: 100px;
+                background-color: red;
+            }
+
+            .grid .center {
+                background-color: yellow;
+            }
+        </style>
+        <div class="grid">
+            <div class="left">left</div>
+            <div class="center">网格布局</div>
+            <div class="right">right</div>
+        </div>
+    </section>
+
+
+    <section>
+        <!-- 优点：真正的解决方案-->
+        <!-- 缺点：兼容性不是很好，可以用在移动端-->
+        <style>
+            .flex {
+                margin-top: 20px;
+                height: 100px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            .flex .center {
+                flex-grow: 1;
+            }
+
+            .flex .left, .right {
+                width: 300px;
+                background-color: red;
+            }
+
+            .center {
+                background-color: yellow;
+            }
+
+        </style>
+        <div class="flex">
+            <div class="left">left</div>
+            <div class="center">弹性盒子布局</div>
+            <div class="right">right</div>
+        </div>
+    </section>
+
+
+    <section>
+        <!-- 优点：兼容性好 -->
+        <!-- 缺点：诟病，同时增高 -->
+        <style>
+            .table {
+                display: table;
+                height: 100px;
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .table .left, .right {
+                width: 300px;
+                height: 100px;
+                background-color: red;
+                display: table-cell;
+            }
+
+            .table .center {
+                height: 100px;
+                background-color: yellow;
+                display: table-cell;
+            }
+        </style>
+        <div class="table">
+            <div class="left">left</div>
+            <div class="center">表格布局</div>
+            <div class="right">right</div>
+        </div>
+    </section>
+
+
+    <section>
+        <!-- 缺点：脱离文档流水 ，处理不好带来很多问题-->
+        <!-- 优点：兼容性好 -->
+        <style>
+            .float {
+                margin-top: 20px;
+                width: 100%;
+            }
+
+            .float .left, .right {
+                width: 300px;
+                height: 100px;
+                background-color: red;
+            }
+
+            .float .left {
+                float: left;
+            }
+
+            .float .right {
+                float: right;
+            }
+
+            .float .center {
+                height: 100px;
+            }
+        </style>
+        <div class="float">
+            <div class="left">left</div>
+            <div class="right">right</div>
+            <div class="center">浮动布局</div>
+        </div>
+    </section>
+
+    <section>
+        <!-- 优点：快-->
+        <!-- 缺点：脱离文档流，有效性差-->
+        <style>
+            .absolute {
+                margin-top: 20px;
+                width: 100%;
+                height: 100px;
+            }
+
+            .absolute div {
+                height: 100px;
+                position: absolute;
+            }
+
+            .absolute .left, .right {
+                width: 300px;
+                background-color: red;
+            }
+
+            .absolute .left {
+                left: 0;
+            }
+
+            .absolute .right {
+                right: 0;
+            }
+
+            .absolute .center {
+                left: 300px;
+                right: 300px;
+            }
+        </style>
+        <div class="absolute">
+            <div class="left">left</div>
+            <div class="center">表格布局</div>
+            <div class="right">right</div>
+        </div>
+    </section>
+</article>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+    <title>viewport</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html[dpr='2'] {
+            font-size: 75px;
+        }
+
+        html[dpr='3'] {
+            font-size: 110px;
+        }
+    </style>
+</head>
+<body>
+<!--<div style="width: 2rem;background: red;height: 100px">-->
+<!---->
+<!--</div>-->
+<img src="dog100.jpg" alt="" style="width: 100px">
+<img src="dog200.jpg" alt="" style="width: 100px">
+<img src="dog300.jpg" alt="" style="width: 100px">
+<script>
+    alert('viewport:' + document.documentElement.clientWidth)
+    alert('dpr:' + window.devicePixelRatio)
+    // alert(document.getElementsByTagName('html')[0].style.fontSize)
+</script>
+</body>
+</html>

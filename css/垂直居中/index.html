@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直居中</title>
+</head>
+<body>
+<div>
+   <div class="f1">
+       <style>
+           .f1 .container {
+               position: relative;
+               background-color: red;
+               width: 200px;
+               height: 200px;
+           }
+
+           .f1 .child {
+               width: 100px;
+               height: 100px;
+               background-color: green;
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               left: 0;
+               right: 0;
+               margin: auto;
+           }
+       </style>
+       <div class=" container">
+           <div class="child">
+               <p>11111</p>
+           </div>
+       </div>
+   </div>
+    <div class="f2">
+        <style>
+            .f2{
+                margin-top: 150px;
+            }
+            .f2 .container {
+                width:200px;
+                height: 200px;
+                background:#ccc;
+                position: relative;
+            }
+
+            .f2 .child {
+                position:absolute;
+                top:50%;
+                height:100px;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top:-50px; /* 高度的一半 */
+                background: #00ff00;
+            }
+        </style>
+        <div class=" container">
+            <div class="child">
+                <p>11111</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="f3">
+        <style>
+            .f3{
+                margin-top: 150px;
+            }
+        </style>
+        <table>
+            <tr>
+                <td>
+                    <div>
+                        <p>呵呵</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="f4">
+        <div style="display: table-cell;vertical-align: middle;height: 100px">
+            呵呵
+        </div>
+    </div>
+</div>
+</body>
+</html>

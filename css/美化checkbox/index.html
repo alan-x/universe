@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+
+    #cb {
+        display: none;
+    }
+
+    label {
+        background-image: url("./checkboxround0.png");
+        background-repeat: no-repeat;
+        background-size: 19px 19px;
+        padding-left: 25px;
+    }
+
+    input:checked + label {
+        background-image: url("./checkboxround1.png");
+    }
+
+</style>
+<input type="checkbox" name="cb" id="cb">
+<label for="cb">选我</label>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片3px</title>
+</head>
+<body>
+
+<div style="background-color: red;margin-top: 10px">
+    <span>这是一张图，img 是 inline，基于基线对齐，所以有空隙， xxxx</span>
+        <img src="./icon.png" alt="" height="100px">
+</div>
+<div style="background-color: red;margin-top: 10px">
+    <span>这是一张图，可以用`block`解决，但是会换行， xxxx</span>
+    <img src="./icon.png" alt="" height="100px" style="display: block">
+</div>
+
+<div style="background-color: red;margin-top: 10px">
+    <span>这是一张图，可以用vertical-align 底部对齐， xxxx</span>
+    <img src="./icon.png" alt="" height="100px" style="vertical-align: bottom">
+</div>
+</body>
+</html>

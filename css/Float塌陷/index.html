@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Float塌陷</title>
+</head>
+<body>
+<div>
+    <div style="float: left">
+        <p>呵呵</p>
+    </div>
+    <div style="clear: both"></div>
+</div>
+<div style="overflow: hidden">
+    <div style="float: left">
+        <p>呵呵</p>
+    </div>
+</div>
+
+<div>
+    <style>
+        .float {
+            float: left;
+        }
+
+        .float::after {
+            content: "";
+            clear: both; /*清除浮动*/
+            display: block; /*确保该元素是一个块级元素*/
+        }
+    </style>
+    <div class="float">
+        <p>呵呵</p>
+    </div>
+</div>
+</body>
+</html>

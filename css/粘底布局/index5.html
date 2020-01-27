@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>粘底布局5</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body style="min-height: 100%;display: flex;flex-direction: column;">
+    <div style="flex: 1">
+        <button>添加内容</button>
+        <div id="content">
+        </div>
+    </div>
+    <footer style="height: 50px;background-color: green">
+        呵呵
+    </footer>
+</body>
+<script>
+    document.getElementsByTagName('button')[0].onclick = () => {
+        let h1 = document.createElement('h1')
+        let text = document.createTextNode('这是新添加的内容')
+        h1.append(text)
+        document.getElementById('content').append(h1)
+    }
+</script>
+</html>

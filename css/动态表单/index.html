@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动态生成表达</title>
+</head>
+<body>
+<div id="form">
+
+</div>
+</body>
+<script>
+    let vNode = {
+        type: 'form',
+        props: {},
+        config: {},
+        children: [
+            {
+                type: 'text',
+                props: {
+                    value: '填写'
+                },
+                config: {},
+            },
+            {
+                type: 'input',
+                props: {},
+                config: {
+                    defaultValue: '',
+                }
+            }
+
+        ]
+    }
+
+    function createElement(vNode, container) {
+        if (vNode.type === 'text') {
+            container.appendChild(document.createTextNode(vNode.props.value))
+            return
+        }
+        let node = document.createElement(vNode.type)
+        vNode.children&&vNode.children.length&&vNode.children.forEach((c)=>{
+            createElement(c,node)
+        })
+        container.appendChild(node)
+    }
+    createElement(vNode,document.getElementById('form'))
+</script>
+</html>
