@@ -1,0 +1,20 @@
+{
+  "name": "call",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bind.js",
+  "scripts": {
+    "test": "jest",
+    "promiseTest": "promises-aplus-tests promise"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.7.7",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
+  }
+}
